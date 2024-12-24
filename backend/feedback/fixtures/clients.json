@@ -3,9 +3,9 @@
         "model": "feedback.client",
         "pk": 1,
         "fields": {
-            "first_name": "John",
-            "last_name": "Doe",
-            "email": "john.doe@nutritechagro.com",
+            "first_name": "Mohammed",
+            "last_name": "kinani",
+            "email": "kinani@nutritechagro.com",
             "products": [1, 2]
         }
     },
@@ -13,9 +13,9 @@
         "model": "feedback.client",
         "pk": 2,
         "fields": {
-            "first_name": "Jane",
-            "last_name": "Smith",
-            "email": "jane.smith@nutritechagro.com",
+            "first_name": "Hassan",
+            "last_name": "Bouchan",
+            "email": "Bouchan@nutritechagro.com",
             "products": [2, 3]
         }
     },
@@ -23,9 +23,9 @@
         "model": "feedback.client",
         "pk": 3,
         "fields": {
-            "first_name": "Alice",
-            "last_name": "Johnson",
-            "email": "alice.johnson@nutritechagro.com",
+            "first_name": "Omar",
+            "last_name": "Ben yahya",
+            "email": "benyahya@nutritechagro.com",
             "products": [1, 3, 4]
         }
     },
@@ -33,9 +33,9 @@
         "model": "feedback.client",
         "pk": 4,
         "fields": {
-            "first_name": "Bob",
-            "last_name": "Brown",
-            "email": "bob.brown@nutritechagro.com",
+            "first_name": "Ali",
+            "last_name": "Ettaous",
+            "email": "ettaous@nutritechagro.com",
             "products": [4]
         }
     },
@@ -43,9 +43,9 @@
         "model": "feedback.client",
         "pk": 5,
         "fields": {
-            "first_name": "Charlie",
-            "last_name": "Davis",
-            "email": "charlie.davis@nutritechagro.com",
+            "first_name": "Ahmed",
+            "last_name": "latrach",
+            "email": "latrach@nutritechagro.com",
             "products": [1, 2, 3, 4]
         }
     }
