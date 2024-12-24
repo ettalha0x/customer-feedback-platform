@@ -1,0 +1,34 @@
+[
+    {
+        "model": "feedback.product",
+        "pk": 1,
+        "fields": {
+            "name": "Engrais Hydrosolubles",
+            "description": "High-quality soluble fertilizer for efficient nutrient delivery."
+        }
+    },
+    {
+        "model": "feedback.product",
+        "pk": 2,
+        "fields": {
+            "name": "Engrais solides",
+            "description": "Solid fertilizers for long-term nutrient supply."
+        }
+    },
+    {
+        "model": "feedback.product",
+        "pk": 3,
+        "fields": {
+            "name": "Correcteurs de carences",
+            "description": "Products designed to correct nutrient deficiencies in crops."
+        }
+    },
+    {
+        "model": "feedback.product",
+        "pk": 4,
+        "fields": {
+            "name": "Biostimulants",
+            "description": "Enhance plant growth and stress resistance with natural biostimulants."
+        }
+    }
+]

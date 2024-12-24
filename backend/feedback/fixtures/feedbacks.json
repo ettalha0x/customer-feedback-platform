@@ -1,0 +1,50 @@
+[
+    {
+        "model": "feedback.feedback",
+        "pk": 1,
+        "fields": {
+            "product": 1,
+            "client": 2,
+            "satisfaction": 5,
+            "improvements": "Excellent product, highly recommend.",
+            "recommend": true,
+            "submitted_at": "2023-10-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "feedback.feedback",
+        "pk": 2,
+        "fields": {
+            "product": 2,
+            "client": 2,
+            "satisfaction": 4,
+            "improvements": "Good quality, but a bit expensive.",
+            "recommend": true,
+            "submitted_at": "2023-10-02T15:30:00Z"
+        }
+    },
+    {
+        "model": "feedback.feedback",
+        "pk": 3,
+        "fields": {
+            "product": 3,
+            "client": 2,
+            "satisfaction": 3,
+            "improvements": "Average performance, needs improvement.",
+            "recommend": false,
+            "submitted_at": "2023-10-03T09:45:00Z"
+        }
+    },
+    {
+        "model": "feedback.feedback",
+        "pk": 4,
+        "fields": {
+            "product": 4,
+            "client": 2,
+            "satisfaction": 5,
+            "improvements": "Outstanding results, very satisfied.",
+            "recommend": true,
+            "submitted_at": "2023-10-04T11:20:00Z"
+        }
+    }
+]

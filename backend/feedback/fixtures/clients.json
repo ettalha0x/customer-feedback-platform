@@ -1,0 +1,52 @@
+[
+    {
+        "model": "feedback.client",
+        "pk": 1,
+        "fields": {
+            "first_name": "John",
+            "last_name": "Doe",
+            "email": "john.doe@nutritechagro.com",
+            "products": [1, 2]
+        }
+    },
+    {
+        "model": "feedback.client",
+        "pk": 2,
+        "fields": {
+            "first_name": "Jane",
+            "last_name": "Smith",
+            "email": "jane.smith@nutritechagro.com",
+            "products": [2, 3]
+        }
+    },
+    {
+        "model": "feedback.client",
+        "pk": 3,
+        "fields": {
+            "first_name": "Alice",
+            "last_name": "Johnson",
+            "email": "alice.johnson@nutritechagro.com",
+            "products": [1, 3, 4]
+        }
+    },
+    {
+        "model": "feedback.client",
+        "pk": 4,
+        "fields": {
+            "first_name": "Bob",
+            "last_name": "Brown",
+            "email": "bob.brown@nutritechagro.com",
+            "products": [4]
+        }
+    },
+    {
+        "model": "feedback.client",
+        "pk": 5,
+        "fields": {
+            "first_name": "Charlie",
+            "last_name": "Davis",
+            "email": "charlie.davis@nutritechagro.com",
+            "products": [1, 2, 3, 4]
+        }
+    }
+]
