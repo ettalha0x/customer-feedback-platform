@@ -57,8 +57,11 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
+# Allow requests from your Next.js development server
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Allow requests from your Next.js development server
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://10.0.10.35:3000"
 ]
 
 ROOT_URLCONF = "backend.urls"

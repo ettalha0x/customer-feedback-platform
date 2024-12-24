@@ -106,7 +106,7 @@ export default function Dashboard() {
       {link && (
         <div className="mt-4 flex items-center space-x-2">
           <p className="font-semibold">Shareable Link:</p>
-          <Link href={link} className="text-blue-500 hover:underline">
+          <Link href={link} className="text-blue-500 hover:underline" target="_blank">
             {`${window.location.origin}${link}`}
           </Link>
           <Button onClick={copyToClipboard} className="ml-2">

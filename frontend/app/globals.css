@@ -69,4 +69,13 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  
+  .background-image {
+    background-image: url('./bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
+
+

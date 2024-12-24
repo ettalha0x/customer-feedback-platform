@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip, Legend } from "recharts"
 import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
 
@@ -52,10 +52,11 @@ export default function Home() {
   const processedData = feedbacks.reduce((acc: any, feedback: any) => {
     const product = productMap[feedback.product]
     if (!acc[product]) {
-      acc[product] = { avgSatisfaction: 0, responses: 0, totalSatisfaction: 0 }
+      acc[product] = { avgSatisfaction: 0, responses: 0, totalSatisfaction: 0, recommendCount: 0 }
     }
     acc[product].responses += 1
     acc[product].totalSatisfaction += feedback.satisfaction
+    if (feedback.recommend) acc[product].recommendCount += 1
     acc[product].avgSatisfaction = acc[product].totalSatisfaction / acc[product].responses
     return acc
   }, {})
@@ -64,6 +65,7 @@ export default function Home() {
     product,
     satisfaction: stats.avgSatisfaction,
     responses: stats.responses,
+    recommendRate: (stats.recommendCount / stats.responses) * 100,
   }))
 
   return (
@@ -81,6 +83,7 @@ export default function Home() {
             <CardContent>
               <p>Average Satisfaction: {stats.avgSatisfaction.toFixed(1)}</p>
               <p>Total Responses: {stats.responses}</p>
+              <p>Recommendation Rate: {(stats.recommendCount / stats.responses * 100).toFixed(1)}%</p>
             </CardContent>
           </Card>
         ))}
@@ -94,11 +97,14 @@ export default function Home() {
             <BarChart data={chartData}>
               <XAxis dataKey="product" />
               <YAxis />
+              <Tooltip />
+              <Legend />
               <Bar dataKey="satisfaction" fill="#4CAF50" />
+              <Bar dataKey="recommendRate" fill="#FFBB28" />
             </BarChart>
           </ResponsiveContainer>
         </CardContent>
       </Card>
     </div>
-    )
-  }
+  )
+}
