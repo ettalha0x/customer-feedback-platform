@@ -17,7 +17,7 @@ Follow these instructions to set up and run the project locally using Docker.
 
 1. **Fork the Repository**
 
-   - Go to the [GitHub repository](https://github.com/yourgithub/customer-feedback-platform) and fork it to your GitHub account.
+   - Go to the [GitHub repository](https://github.com/ettalha0x/customer-feedback-platform) and fork it to your GitHub account.
 
 2. **Create a New Codespace Instance**
 
