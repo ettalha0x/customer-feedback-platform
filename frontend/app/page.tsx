@@ -29,7 +29,7 @@ const [feedbacks, setFeedbacks] = useState<Feedback[]>([])
   useEffect(() => {
     const fetchFeedbacks = async () => {
       try {
-        const response = await fetch('https://cuddly-trout-7rqrgw7vxvcx7v6-8000.app.github.dev/feedback/feedbacks')
+        const response = await fetch('http://127.0.0.1:8000/feedback/feedbacks')
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }
@@ -42,7 +42,7 @@ const [feedbacks, setFeedbacks] = useState<Feedback[]>([])
 
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://cuddly-trout-7rqrgw7vxvcx7v6-8000.app.github.dev/feedback/products')
+        const response = await fetch('http://127.0.0.1:8000/feedback/products')
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }

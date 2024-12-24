@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-k@a5d=!n656cwo1$t1kzb@9gr4mp_^f&ny5p1=sw@xt+j@2g_i"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://cuddly-trout-7rqrgw7vxvcx7v6-3000.app.github.dev', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -54,15 +55,16 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+    "django.middleware.security.SecurityMiddleware",
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
-# # Allow requests from your Next.js development server
-# CORS_ALLOWED_ORIGINS = [
-#     "https://cuddly-trout-7rqrgw7vxvcx7v6-3000.app.github.dev",
-# ]
+CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOW_ALL_ORIGINS = True
+# Allow requests from your Next.js development server
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:3000",
+]
+
 
 ROOT_URLCONF = "backend.urls"
 
