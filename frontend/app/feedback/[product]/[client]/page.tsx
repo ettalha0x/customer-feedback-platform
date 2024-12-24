@@ -31,7 +31,7 @@ export default function FeedbackSubmission() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/feedback/feedbacks/", {
+      const response = await fetch("https://cuddly-trout-7rqrgw7vxvcx7v6-8000.app.github.dev/feedback/feedbacks/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
