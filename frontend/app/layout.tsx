@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex items-center justify-center min-h-screen bg-gray-50 background-image">
-          <div className="container mx-auto p-4 bg-white bg-opacity-80 rounded-lg shadow-lg">
+          <div className="p-4 bg-white bg-opacity-80 rounded-lg shadow-lg">
             <header className="mb-8 text-center">
               <h1 className="text-3xl font-bold text-green-700">Nutritech Agro Feedback Platform</h1>
             </header>

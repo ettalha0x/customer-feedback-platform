@@ -6,10 +6,25 @@ import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip, Legend } fro
 import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
 
+interface Product {
+  id: number
+  name: string
+}
+
+interface Feedback {
+  product: number
+  satisfaction: number
+  improvements: string
+  recommend: boolean
+  submitted_at: string
+}
+
+
+
 export default function Home() {
   const router = useRouter()
-  const [feedbacks, setFeedbacks] = useState<any>(null)
-  const [products, setProducts] = useState<any>(null)
+  const [products, setProducts] = useState<Product[]>([])
+const [feedbacks, setFeedbacks] = useState<Feedback[]>([])
 
   useEffect(() => {
     const fetchFeedbacks = async () => {

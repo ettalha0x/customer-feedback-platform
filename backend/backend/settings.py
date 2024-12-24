@@ -60,8 +60,7 @@ MIDDLEWARE = [
 # Allow requests from your Next.js development server
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "https://cuddly-trout-7rqrgw7vxvcx7v6-3000.app.github.dev/"
+    "http://127.0.0.1:3000"
 ]
 
 ROOT_URLCONF = "backend.urls"

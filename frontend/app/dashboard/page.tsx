@@ -7,10 +7,24 @@ import { Button } from "@/components/ui/button"
 import { FaCopy } from "react-icons/fa"
 import toast, { Toaster } from 'react-hot-toast'
 
+interface Client {
+  id: number // Added missing 'id' property
+  first_name: string
+  last_name: string
+  email: string
+  products: number[]
+}
+
+interface Product {
+  id: number // Added missing 'id' property
+  name: string
+  description: string
+}
+
 export default function Dashboard() {
-  const [products, setProducts] = useState<{ id: number, name: string }[]>([])
-  const [clients, setClients] = useState<any[]>([])
-  const [filteredClients, setFilteredClients] = useState<any[]>([])
+  const [products, setProducts] = useState<Product[]>([]) // Added missing type annotation
+  const [clients, setClients] = useState<Client[]>([])
+  const [filteredClients, setFilteredClients] = useState<Client[]>([])
   const [selectedProduct, setSelectedProduct] = useState<number | undefined>()
   const [selectedClient, setSelectedClient] = useState<number | undefined>()
   const [link, setLink] = useState<string | null>(null)
@@ -74,7 +88,7 @@ export default function Dashboard() {
             <SelectValue placeholder="Select a product" />
           </SelectTrigger>
           <SelectContent>
-            {products.map((product) => (
+            {products.map((product: Product) => ( // Added type annotation for 'product'
               <SelectItem key={product.id} value={product.id.toString()}>
                 {product.name}
               </SelectItem>
@@ -88,7 +102,7 @@ export default function Dashboard() {
               <SelectValue placeholder="Select a client" />
             </SelectTrigger>
             <SelectContent>
-              {filteredClients.map((client) => (
+              {filteredClients.map((client: Client) => ( // Added type annotation for 'client'
                 <SelectItem key={client.id} value={client.id.toString()}>
                   {client.first_name} {client.last_name}
                 </SelectItem>
