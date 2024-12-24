@@ -20,7 +20,7 @@ export default function RootLayout({
         <div className="flex items-center justify-center min-h-screen bg-gray-50">
           <div className="container mx-auto p-4">
             <header className="mb-8 text-center">
-              <h1 className="text-3xl font-bold text-green-700">Nutritech Agro Feedback</h1>
+              <h1 className="text-3xl font-bold text-green-700">Nutritech Agro Feedback Platfrom </h1>
             </header>
             <main>{children}</main>
           </div>

@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-semibold">Feedback Summary</h2>
+        <h2 className="text-2xl font-semibold">Feedback Insights</h2>
         <Button className="btn" onClick={() => router.push("/dashboard")}>Create new feedback form</Button>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
