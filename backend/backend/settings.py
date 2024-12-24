@@ -62,6 +62,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "https://customer-feedback-platform-swart.vercel.app",
+    "https://customer-feedback-platform-git-main-1337meds-projects.vercel.app",
     "https://customer-feedback-platform-88z563ufj-1337meds-projects.vercel.app"
 ]
 
