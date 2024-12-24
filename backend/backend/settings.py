@@ -61,7 +61,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "http://10.0.10.35:3000"
+    "https://cuddly-trout-7rqrgw7vxvcx7v6-3000.app.github.dev/"
 ]
 
 ROOT_URLCONF = "backend.urls"
