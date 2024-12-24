@@ -11,12 +11,13 @@ Follow these instructions to set up and run the project locally using Docker.
 - Docker
 - Docker Compose
 - GitHub account
+- Visual Studio Code with the Codespaces extension
 
 ### Setup Instructions
 
 1. **Fork the Repository**
 
-   - Go to the [GitHub repository](https://github.com/ettalha0x/customer-feedback-platform) and fork it to your GitHub account.
+   - Go to the [GitHub repository](https://github.com/yourgithub/customer-feedback-platform) and fork it to your GitHub account.
 
 2. **Create a New Codespace Instance**
 
@@ -24,7 +25,11 @@ Follow these instructions to set up and run the project locally using Docker.
    - Click on the "Code" button and select "Open with Codespaces."
    - Create a new Codespace instance.
 
-3. **Configure the Backend**
+3. **Open Codespace in VS Code Desktop**
+
+   - Once the Codespace is created, click on the "Open in VS Code" button to open the instance in your local VS Code Desktop application.
+
+4. **Configure the Backend**
 
    - Open a terminal in your Codespace.
    - Navigate to the backend directory:
@@ -39,7 +44,7 @@ Follow these instructions to set up and run the project locally using Docker.
      echo "DATABASE_URL=your_database_url" > .env
      ```
 
-4. **Run the Project**
+5. **Run the Project**
 
    - Navigate to the root directory:
 
@@ -53,7 +58,7 @@ Follow these instructions to set up and run the project locally using Docker.
      docker-compose up
      ```
 
-5. **Access the Application**
+6. **Access the Application**
 
    - Once the services are running, you can access the frontend at `http://localhost:3000` and the backend at `http://localhost:8000`.
 
