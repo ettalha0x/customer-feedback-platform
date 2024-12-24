@@ -32,7 +32,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("https://cuddly-trout-7rqrgw7vxvcx7v6-8000.app.github.dev/feedback/products/")
+        const response = await fetch("https://cuddly-trout-7rqrgw7vxvcx7v6-8000.app.github.dev/feedback/products")
         const data = await response.json()
         setProducts(data)
       } catch (error) {
@@ -42,7 +42,7 @@ export default function Dashboard() {
 
     const fetchClients = async () => {
       try {
-        const response = await fetch("https://cuddly-trout-7rqrgw7vxvcx7v6-8000.app.github.dev/feedback/clients/")
+        const response = await fetch("https://cuddly-trout-7rqrgw7vxvcx7v6-8000.app.github.dev/feedback/clients")
         const data = await response.json()
         setClients(data)
       } catch (error) {

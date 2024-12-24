@@ -55,16 +55,14 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
 ]
 
-# Allow requests from your Next.js development server
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "https://customer-feedback-platform-swart.vercel.app",
-    "https://customer-feedback-platform-git-main-1337meds-projects.vercel.app",
-    "https://customer-feedback-platform-88z563ufj-1337meds-projects.vercel.app"
-]
+CORS_ALLOW_ALL_ORIGINS = True
+# # Allow requests from your Next.js development server
+# CORS_ALLOWED_ORIGINS = [
+#     "https://cuddly-trout-7rqrgw7vxvcx7v6-3000.app.github.dev",
+# ]
 
 ROOT_URLCONF = "backend.urls"
 
