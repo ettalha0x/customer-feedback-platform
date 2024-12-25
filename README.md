@@ -1,6 +1,7 @@
 # Customer Feedback Platform
 
 This project is a customer feedback platform built with a Django backend and a Next.js frontend. It allows users to submit feedback and view insights.
+[Demo video](https://drive.google.com/file/d/1MInHR9YVEA2BQRxthHxzYwg2yA_DiHWC/view?usp=sharing)
 
 ## Getting Started
 
