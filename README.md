@@ -5,12 +5,10 @@ This project is a customer feedback platform built with a Django backend and a N
 
 ## Getting Started
 
-Follow these instructions to set up and run the project locally using Docker.
+Follow these instructions to set up and run the project locally.
 
 ### Prerequisites
 
-- Docker
-- Docker Compose
 - GitHub account
 - Visual Studio Code with the Codespaces extension
 
@@ -30,38 +28,26 @@ Follow these instructions to set up and run the project locally using Docker.
 
    - Once the Codespace is created, click on the "Open in VS Code" button to open the instance in your local VS Code Desktop application.
 
-4. **Configure the Backend**
-
-   - Open a terminal in your Codespace.
-   - Navigate to the backend directory:
-
-     ```bash
-     cd backend
-     ```
-
-   - Create a `.env` file and add the database URL you received by email:
-
-     ```bash
-     echo "DATABASE_URL=your_database_url" > .env
-     ```
-
-5. **Run the Project**
+4. **Run the Project**
 
    - Navigate to the root directory:
+   - Open the terminal.
+   - Run the command:
 
      ```bash
-     cd ..
+     make backend
      ```
 
-   - Start the services using Docker Compose:
+   - Open a new terminal window.
+   - Run the command:
 
      ```bash
-     docker-compose up
+     make frontend
      ```
 
 6. **Access the Application**
 
-   - Once the services are running, you can access the frontend at `http://localhost:3000` and the backend at `http://localhost:8000`.
+   - Once the services are running, you can access the frontend at `http://127.0.0.1:3000` and the backend at `http://127.0.0.1:8000`.
 
 ### Project Structure
 
