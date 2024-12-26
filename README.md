@@ -47,7 +47,7 @@ Follow these instructions to set up and run the project locally.
 
 6. **Access the Application**
 
-   - Once the services are running, you can access the frontend at `http://127.0.0.1:3000` and the backend at `http://127.0.0.1:8000`.
+   - Once the services are running, you can access the home page at `http://127.0.0.1:3000`.
 
 ### Project Structure
 
