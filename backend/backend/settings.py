@@ -55,7 +55,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "django.middleware.security.SecurityMiddleware",
 ]
 
 # CORS_ALLOW_CREDENTIALS = True
@@ -63,8 +62,8 @@ MIDDLEWARE = [
 # Allow requests from your Next.js development server
 
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:3000",
     "http://localhost:3000",
+    "http://127.0.0.1:3000",
 ]
 
 
