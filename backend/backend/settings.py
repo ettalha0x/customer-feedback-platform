@@ -58,11 +58,13 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
 ]
 
-CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOW_CREDENTIALS = True
 # CORS_ALLOW_ALL_ORIGINS = True
 # Allow requests from your Next.js development server
+
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
+    "http://localhost:3000",
 ]
 
 
@@ -92,18 +94,26 @@ WSGI_APPLICATION = "backend.wsgi.application"
 
 
 # Load environment variables from .env file
-load_dotenv()
+# load_dotenv()
 
-db = urlparse(getenv("DATABASE_URL"))
+# db = urlparse(getenv("DATABASE_URL"))
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': db.path[1:],  # Remove leading '/'
+#         'USER': db.username,
+#         'PASSWORD': db.password,
+#         'HOST': db.hostname,
+#         'PORT': db.port or '5432',  # Use db.port if available, otherwise default to '5432'
+#     }
+# }
+
+# Configure SQLite
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': db.path[1:],  # Remove leading '/'
-        'USER': db.username,
-        'PASSWORD': db.password,
-        'HOST': db.hostname,
-        'PORT': db.port or '5432',  # Use db.port if available, otherwise default to '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
     }
 }
 
