@@ -12,8 +12,9 @@ import 'react-toastify/dist/ReactToastify.css'
 export default function FeedbackSubmission() {
   const params = useParams()
   const router = useRouter()
-  const productId = parseInt(params.product as string, 10)
-  const clientId = parseInt(params.client as string, 10)
+  const productName = decodeURIComponent(params.productName as string).split("%20");
+  const productId = parseInt(params.productID as string, 10)
+  const clientId = parseInt(params.clientID as string, 10)
   const [satisfaction, setSatisfaction] = useState<string>("")
   const [improvements, setImprovements] = useState("")
   const [recommend, setRecommend] = useState<string>("")
@@ -31,7 +32,7 @@ export default function FeedbackSubmission() {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/feedback/feedbacks", {
+      const response = await fetch("http://127.0.0.1:8000/feedback/feedbacks/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -56,7 +57,7 @@ export default function FeedbackSubmission() {
   return (
     <div className="space-y-6">
       <ToastContainer />
-      <h2 className="text-2xl font-semibold">Feedback for Product {productId}</h2>
+      <h2 className="text-2xl font-semibold">Feedback for {productName}</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <Label>How satisfied are you with the product?</Label>

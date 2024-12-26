@@ -32,7 +32,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/feedback/products")
+        const response = await fetch("http://127.0.0.1:8000/feedback/products/")
         const data = await response.json()
         setProducts(data)
       } catch (error) {
@@ -42,7 +42,7 @@ export default function Dashboard() {
 
     const fetchClients = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/feedback/clients")
+        const response = await fetch("http://127.0.0.1:8000/feedback/clients/")
         const data = await response.json()
         setClients(data)
       } catch (error) {
@@ -67,7 +67,8 @@ export default function Dashboard() {
 
   const generateLink = () => {
     if (selectedProduct !== undefined && selectedClient !== undefined) {
-      setLink(`/feedback/${selectedProduct}/${selectedClient}`)
+      const productName = products.find(product => product.id === selectedProduct)?.name
+      setLink(`/feedback/${productName}/${selectedProduct}/${selectedClient}`)
     }
   }
 

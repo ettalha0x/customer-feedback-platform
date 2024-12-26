@@ -114,8 +114,8 @@ const [feedbacks, setFeedbacks] = useState<Feedback[]>([])
               <YAxis />
               <Tooltip />
               <Legend />
-              <Bar dataKey="satisfaction" fill="#4CAF50" />
-              <Bar dataKey="recommendRate" fill="#FFBB28" />
+              <Bar dataKey="satisfaction" fill="#4CAF50" name="Satisfaction rate"/>
+                <Bar dataKey="recommendRate" fill="#FFBB28" name="Recommendation rate" />
             </BarChart>
           </ResponsiveContainer>
         </CardContent>
