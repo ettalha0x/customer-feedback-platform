@@ -4,4 +4,4 @@ backend:
 	cd ./backend && pip install -r requirements.txt && python manage.py runserver
 
 frontend:
-	cd ./frontend && npm install && npm run dev
+	cd ./frontend && npm install && npm run build && npm run start
